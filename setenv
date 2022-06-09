@@ -1,5 +1,5 @@
 . ./.access
-env_id=ma-cp4i
+env_id=ma-rosa-cp4i
 pwd=`pwd`
 suffix="cp4i"
 export STATUS_DIR=${pwd}/status-${suffix}/sample
