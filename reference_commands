@@ -1,0 +1,19 @@
+# Validate the configuration
+./cp-deploy.sh env apply -e env_id=${env_id} --check-only
+
+# Execute the deployer
+./cp-deploy.sh env apply -e env_id=${env_id} --accept-all-licenses
+
+# Check logs 
+./cp-deploy.sh env logs
+
+
+# Kill the env
+./cp-deploy.sh env kill
+
+# Cloud pak URL 
+cat $STATUS_DIR/cloud-paks/*
+
+# Get secret from vault
+./cp-deploy.sh vault list
+./cp-deploy.sh vault get --vault-secret <value from above>
