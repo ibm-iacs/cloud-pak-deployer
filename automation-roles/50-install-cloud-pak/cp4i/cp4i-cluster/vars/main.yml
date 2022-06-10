@@ -1,5 +1,5 @@
 ---
-implemented_cloud_platform_types: ['ibm-cloud','existing-ocp','vsphere']
+implemented_cloud_platform_types: ['ibm-cloud','existing-ocp','vsphere','aws']
 
 entitled_registry: cp.icr.io
 entitled_registry_username: cp
@@ -78,7 +78,7 @@ instance_types:
   source_catalog_online: ibm-operator-catalog
   source_catalog_case: ibm-eventstreams
   default_template: event-streams-development
-  
+
 - type: messaging
   package_name: ibm-mq
   kind: QueueManager
@@ -94,4 +94,3 @@ instance_types:
   source_catalog_online: ibm-operator-catalog
   source_catalog_case: ibm-integration-operations-dashboard-catalog
   default_template: integration-tracing-development
-  
