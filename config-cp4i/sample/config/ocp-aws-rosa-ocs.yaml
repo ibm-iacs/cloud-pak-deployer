@@ -6,7 +6,7 @@ openshift:
   compute_nodes: 3
   infrastructure:
     type: rosa
-    aws_region: eu-central-1
+    aws_region: ap-south-1
     multi_zone: False
     use_sts: False
   openshift_storage:

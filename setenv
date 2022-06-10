@@ -11,3 +11,14 @@ export AWS_SECRET_ACCESS_KEY=${your_secret_access_key}
 export ROSA_LOGIN_TOKEN=${your_rosa_login_token}
 export CP_ENTITLEMENT_KEY=${your_cp_entitlement_key}
 
+./cp-deploy.sh vault set \
+    --vault-secret aws-access-key \
+    --vault-secret-value $AWS_ACCESS_KEY_ID
+
+./cp-deploy.sh vault set \
+    --vault-secret aws-secret-access-key \
+    --vault-secret-value $AWS_SECRET_ACCESS_KEY
+
+./cp-deploy.sh vault set \
+    --vault-secret rosa-login-token \
+    --vault-secret-value $ROSA_LOGIN_TOKEN
