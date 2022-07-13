@@ -2,6 +2,7 @@
 global_config:
   environment_name: sample
   cloud_platform: aws
+  aws_region: eu-central-1
 
 openshift:
 - name: "{{ env_id }}"
@@ -10,7 +11,7 @@ openshift:
   compute_nodes: 3
   infrastructure:
     type: rosa
-    aws_region: eu-central-1
+    aws_region: "{{ aws_region }}"
     multi_zone: True
     use_sts: False
   openshift_storage:

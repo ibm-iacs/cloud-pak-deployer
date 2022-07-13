@@ -1,6 +1,6 @@
 # Container image including olm-utils
 FROM registry.access.redhat.com/ubi8/ubi
-FROM icr.io/cpopen/cpd/olm-utils:pre-release
+FROM icr.io/cpopen/cpd/olm-utils:latest
 
 LABEL authors="Arthur Laimbock, \
             Markus Wiegleb, \
@@ -13,7 +13,7 @@ USER 0
 RUN yum install -y yum-utils python38 python38-pip && \
     yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo && \
     yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm && \
-    yum install -y tar sudo unzip wget jq skopeo httpd-tools git && \
+    yum install -y tar sudo unzip wget jq skopeo httpd-tools git hostname bind-utils iproute && \
     pip3 install --upgrade pip && \
     pip3 install jmespath pyyaml argparse python-benedict pyvmomi && \
     alternatives --set python /usr/bin/python3 && \
