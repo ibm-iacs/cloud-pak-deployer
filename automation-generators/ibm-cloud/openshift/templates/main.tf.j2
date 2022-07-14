@@ -16,7 +16,7 @@ resource "ibm_container_vpc_cluster" "{{generator.attributes.name | replace("-",
     resource_group_id = data.ibm_resource_group.thisresourcegroup.id
 
     timeouts {
-      create = "3h"
+      create = "24h"
       delete = "2h"
     }
 
